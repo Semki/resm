@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="dictionary_collection_elements">
+    <% @dictionary_collection_elements.each do |dictionary_collection_element| %>
+      <li>
+        <%= link_to dictionary_collection_element, refinery.dictionary_collection_elements_dictionary_collection_element_path(dictionary_collection_element) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

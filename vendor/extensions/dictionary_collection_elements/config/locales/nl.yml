@@ -1,0 +1,28 @@
+nl:
+  refinery:
+    plugins:
+      dictionary_collection_elements:
+        title: Dictionary Collection Elements
+    dictionary_collection_elements:
+      admin:
+        dictionary_collection_elements:
+          actions:
+            create_new: Maak een nieuwe Dictionary Collection Element
+            reorder: Wijzig de volgorde van de Dictionary Collection Elements
+            reorder_done: Klaar met het wijzingen van de volgorde van de Dictionary Collection Elements
+          records:
+            title: Dictionary Collection Elements
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Dictionary Collection Elements. Druk op 'Maak een nieuwe Dictionary Collection Element' om de eerste aan te maken.
+          dictionary_collection_element:
+            view_live_html: Bekijk deze dictionary collection element op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze dictionary collection element
+            delete: Verwijder deze dictionary collection element voor eeuwig
+      dictionary_collection_elements:
+        show:
+          other: Andere Dictionary Collection Elements
+  activerecord:
+    attributes:
+      'refinery/dictionary_collection_elements/dictionary_collection_element':
+        dictionary_id: Dictionary
+        collection_id: Collection

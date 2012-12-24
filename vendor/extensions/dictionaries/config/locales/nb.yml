@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      dictionaries:
+        title: Dictionaries
+    dictionaries:
+      admin:
+        dictionaries:
+          actions:
+            create_new: Lag en ny Dictionary
+            reorder: Endre rekkefølgen på Dictionaries
+            reorder_done: Ferdig å endre rekkefølgen Dictionaries
+          records:
+            title: Dictionaries
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Dictionaries enda. Klikk på "Lag en ny Dictionary" for å legge til din første dictionary.
+          dictionary:
+            view_live_html: Vis hvordan denne dictionary ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne dictionary
+            delete: Fjern denne dictionary permanent
+      dictionaries:
+        show:
+          other: Andre Dictionaries
+  activerecord:
+    attributes:
+      'refinery/dictionaries/dictionary':
+        classname: Classname
+        name: Name
+        local_name: Local Name
+        parent_id: Parent
+        external_id: External

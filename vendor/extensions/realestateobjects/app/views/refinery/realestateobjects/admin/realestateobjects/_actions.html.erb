@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Realestateobjects::Admin::RealestateobjectsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.realestateobjects_admin_realestateobjects_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_realestateobjects_admin_realestateobject_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Realestateobjects::Admin::RealestateobjectsController.sortable? && ::Refinery::Realestateobjects::Realestateobject.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Realestateobjects"),
+                 refinery.realestateobjects_admin_realestateobjects_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Realestateobjects"),
+                 refinery.realestateobjects_admin_realestateobjects_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

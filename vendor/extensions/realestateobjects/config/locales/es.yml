@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      realestateobjects:
+        title: Realestateobjects
+#        article: masculino/femenino
+    realestateobjects:
+      admin:
+        realestateobjects:
+          actions:
+            create_new: Crear nuevo realestateobject
+            reorder: Reordenar realestateobjects
+            reorder_done: Reordenación de realestateobjects completada
+          records:
+            title: Realestateobjects
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay realestateobjects todavía. Pulsa en "Crear nuevo Realestateobject" para crear tu primer realestateobject.
+          realestateobject:
+            view_live_html: Ver este realestateobject como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este realestateobject
+            delete: Borrar este realestateobject para siempre
+      realestateobjects:
+        show:
+          other: Otros realestateobjects
+  activerecord:
+    attributes:
+      'refinery/realestateobjects/realestateobject':
+        complex_id: Complex
+        collection_id: Collection
+        name: Name
+        price: Price

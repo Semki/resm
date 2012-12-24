@@ -1,0 +1,27 @@
+en:
+  refinery:
+    plugins:
+      collections:
+        title: Collections
+    collections:
+      admin:
+        collections:
+          actions:
+            create_new: Add New Collection
+            reorder: Reorder Collections
+            reorder_done: Done Reordering Collections
+          records:
+            title: Collections
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Collections yet. Click "Add New Collection" to add your first collection.
+          collection:
+            view_live_html: View this collection live <br/><em>(opens in a new window)</em>
+            edit: Edit this collection
+            delete: Remove this collection forever
+      collections:
+        show:
+          other: Other Collections
+  activerecord:
+    attributes:
+      'refinery/collections/collection':
+        tag: Tag

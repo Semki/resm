@@ -1,0 +1,28 @@
+sk:
+  refinery:
+    plugins:
+      dictionary_collection_elements:
+        title: Dictionary Collection Elements
+    dictionary_collection_elements:
+      admin:
+        dictionary_collection_elements:
+          actions:
+            create_new: Pridať Dictionary Collection Element
+            reorder: Preusporiadať Dictionary Collection Elements
+            reorder_done: Koniec radenia Dictionary Collection Elements
+          records:
+            title: Dictionary Collection Elements
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Dictionary Collection Elements. Kliknite na "Pridať Dictionary Collection Element" pre pridanie prvého dictionary collection element.
+          dictionary_collection_element:
+            view_live_html: Zobraziť náhľad dictionary collection element<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť dictionary collection element
+            delete: Zmazať dictionary collection element
+      dictionary_collection_elements:
+        show:
+          other: Daľšie Dictionary Collection Elements
+  activerecord:
+    attributes:
+      'refinery/dictionary_collection_elements/dictionary_collection_element':
+        dictionary_id: Dictionary
+        collection_id: Collection

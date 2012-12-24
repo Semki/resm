@@ -1,0 +1,1 @@
+require 'refinery/dictionary_collection_elements'

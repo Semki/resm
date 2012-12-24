@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      dictionaries:
+        title: Dictionaries
+    dictionaries:
+      admin:
+        dictionaries:
+          actions:
+            create_new: Maak een nieuwe Dictionary
+            reorder: Wijzig de volgorde van de Dictionaries
+            reorder_done: Klaar met het wijzingen van de volgorde van de Dictionaries
+          records:
+            title: Dictionaries
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Dictionaries. Druk op 'Maak een nieuwe Dictionary' om de eerste aan te maken.
+          dictionary:
+            view_live_html: Bekijk deze dictionary op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze dictionary
+            delete: Verwijder deze dictionary voor eeuwig
+      dictionaries:
+        show:
+          other: Andere Dictionaries
+  activerecord:
+    attributes:
+      'refinery/dictionaries/dictionary':
+        classname: Classname
+        name: Name
+        local_name: Local Name
+        parent_id: Parent
+        external_id: External

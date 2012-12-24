@@ -1,0 +1,27 @@
+nb:
+  refinery:
+    plugins:
+      collections:
+        title: Collections
+    collections:
+      admin:
+        collections:
+          actions:
+            create_new: Lag en ny Collection
+            reorder: Endre rekkefølgen på Collections
+            reorder_done: Ferdig å endre rekkefølgen Collections
+          records:
+            title: Collections
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Collections enda. Klikk på "Lag en ny Collection" for å legge til din første collection.
+          collection:
+            view_live_html: Vis hvordan denne collection ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne collection
+            delete: Fjern denne collection permanent
+      collections:
+        show:
+          other: Andre Collections
+  activerecord:
+    attributes:
+      'refinery/collections/collection':
+        tag: Tag

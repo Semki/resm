@@ -1,0 +1,51 @@
+<% content_for :body_content_title do %>
+  <%= @dictionary.classname %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Classname</h1>
+    <p>
+      <%=raw @dictionary.classname %>
+    </p>
+  </section>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @dictionary.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Local Name</h1>
+    <p>
+      <%=raw @dictionary.local_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Parent</h1>
+    <p>
+      <%=raw @dictionary.parent_id %>
+    </p>
+  </section>
+  <section>
+    <h1>External</h1>
+    <p>
+      <%=raw @dictionary.external_id %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="dictionaries">
+      <% @dictionaries.each do |dictionary| %>
+        <li>
+          <%= link_to dictionary.classname, refinery.dictionaries_dictionary_path(dictionary) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

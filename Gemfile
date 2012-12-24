@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.9'
 
@@ -59,3 +59,8 @@ gem 'fog'
 group :production do
 	gem 'pg'
 end
+
+gem 'refinerycms-dictionaries', :path => 'vendor/extensions'
+gem 'refinerycms-dictionary_collection_elements', :path => 'vendor/extensions'
+gem 'refinerycms-collections', :path => 'vendor/extensions'
+gem 'refinerycms-realestateobjects', :path => 'vendor/extensions'

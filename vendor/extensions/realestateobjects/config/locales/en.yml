@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      realestateobjects:
+        title: Realestateobjects
+    realestateobjects:
+      admin:
+        realestateobjects:
+          actions:
+            create_new: Add New Realestateobject
+            reorder: Reorder Realestateobjects
+            reorder_done: Done Reordering Realestateobjects
+          records:
+            title: Realestateobjects
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Realestateobjects yet. Click "Add New Realestateobject" to add your first realestateobject.
+          realestateobject:
+            view_live_html: View this realestateobject live <br/><em>(opens in a new window)</em>
+            edit: Edit this realestateobject
+            delete: Remove this realestateobject forever
+      realestateobjects:
+        show:
+          other: Other Realestateobjects
+  activerecord:
+    attributes:
+      'refinery/realestateobjects/realestateobject':
+        complex_id: Complex
+        collection_id: Collection
+        name: Name
+        price: Price

@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      dictionaries:
+        title: Dictionaries
+#        article: masculino/femenino
+    dictionaries:
+      admin:
+        dictionaries:
+          actions:
+            create_new: Crear nuevo dictionary
+            reorder: Reordenar dictionaries
+            reorder_done: Reordenación de dictionaries completada
+          records:
+            title: Dictionaries
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay dictionaries todavía. Pulsa en "Crear nuevo Dictionary" para crear tu primer dictionary.
+          dictionary:
+            view_live_html: Ver este dictionary como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este dictionary
+            delete: Borrar este dictionary para siempre
+      dictionaries:
+        show:
+          other: Otros dictionaries
+  activerecord:
+    attributes:
+      'refinery/dictionaries/dictionary':
+        classname: Classname
+        name: Name
+        local_name: Local Name
+        parent_id: Parent
+        external_id: External
