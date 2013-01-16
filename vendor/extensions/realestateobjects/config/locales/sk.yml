@@ -1,0 +1,31 @@
+sk:
+  refinery:
+    plugins:
+      realestateobjects:
+        title: Realestateobjects
+    realestateobjects:
+      admin:
+        realestateobjects:
+          actions:
+            create_new: Pridať Realestateobject
+            reorder: Preusporiadať Realestateobjects
+            reorder_done: Koniec radenia Realestateobjects
+          records:
+            title: Realestateobjects
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Realestateobjects. Kliknite na "Pridať Realestateobject" pre pridanie prvého realestateobject.
+          realestateobject:
+            view_live_html: Zobraziť náhľad realestateobject<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť realestateobject
+            delete: Zmazať realestateobject
+      realestateobjects:
+        show:
+          other: Daľšie Realestateobjects
+  activerecord:
+    attributes:
+      'refinery/realestateobjects/realestateobject':
+        complex: Complex
+        collection: Collection
+        name: Name
+        status: Status
+        price: Price

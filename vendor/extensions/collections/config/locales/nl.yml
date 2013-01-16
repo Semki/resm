@@ -1,0 +1,27 @@
+nl:
+  refinery:
+    plugins:
+      collections:
+        title: Collections
+    collections:
+      admin:
+        collections:
+          actions:
+            create_new: Maak een nieuwe Collection
+            reorder: Wijzig de volgorde van de Collections
+            reorder_done: Klaar met het wijzingen van de volgorde van de Collections
+          records:
+            title: Collections
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Collections. Druk op 'Maak een nieuwe Collection' om de eerste aan te maken.
+          collection:
+            view_live_html: Bekijk deze collection op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze collection
+            delete: Verwijder deze collection voor eeuwig
+      collections:
+        show:
+          other: Andere Collections
+  activerecord:
+    attributes:
+      'refinery/collections/collection':
+        tag: Tag

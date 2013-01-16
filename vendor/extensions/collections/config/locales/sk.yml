@@ -1,0 +1,27 @@
+sk:
+  refinery:
+    plugins:
+      collections:
+        title: Collections
+    collections:
+      admin:
+        collections:
+          actions:
+            create_new: Pridať Collection
+            reorder: Preusporiadať Collections
+            reorder_done: Koniec radenia Collections
+          records:
+            title: Collections
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Collections. Kliknite na "Pridať Collection" pre pridanie prvého collection.
+          collection:
+            view_live_html: Zobraziť náhľad collection<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť collection
+            delete: Zmazať collection
+      collections:
+        show:
+          other: Daľšie Collections
+  activerecord:
+    attributes:
+      'refinery/collections/collection':
+        tag: Tag

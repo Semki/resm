@@ -59,3 +59,8 @@ gem 'fog'
 group :production do
 	gem 'pg'
 end
+
+gem 'refinerycms-realestateobjects', :path => 'vendor/extensions'
+gem 'refinerycms-dictionaries', :path => 'vendor/extensions'
+gem 'refinerycms-collections', :path => 'vendor/extensions'
+gem 'refinerycms-dictionary_collection_elements', :path => 'vendor/extensions'

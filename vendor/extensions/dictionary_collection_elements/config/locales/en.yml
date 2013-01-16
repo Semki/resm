@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      dictionary_collection_elements:
+        title: Dictionary Collection Elements
+    dictionary_collection_elements:
+      admin:
+        dictionary_collection_elements:
+          actions:
+            create_new: Add New Dictionary Collection Element
+            reorder: Reorder Dictionary Collection Elements
+            reorder_done: Done Reordering Dictionary Collection Elements
+          records:
+            title: Dictionary Collection Elements
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Dictionary Collection Elements yet. Click "Add New Dictionary Collection Element" to add your first dictionary collection element.
+          dictionary_collection_element:
+            view_live_html: View this dictionary collection element live <br/><em>(opens in a new window)</em>
+            edit: Edit this dictionary collection element
+            delete: Remove this dictionary collection element forever
+      dictionary_collection_elements:
+        show:
+          other: Other Dictionary Collection Elements
+  activerecord:
+    attributes:
+      'refinery/dictionary_collection_elements/dictionary_collection_element':
+        dictionary: Dictionary
+        collection: Collection

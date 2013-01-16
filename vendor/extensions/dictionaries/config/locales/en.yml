@@ -1,0 +1,32 @@
+en:
+  refinery:
+    plugins:
+      dictionaries:
+        title: Dictionaries
+    dictionaries:
+      admin:
+        dictionaries:
+          actions:
+            create_new: Add New Dictionary
+            reorder: Reorder Dictionaries
+            reorder_done: Done Reordering Dictionaries
+          records:
+            title: Dictionaries
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Dictionaries yet. Click "Add New Dictionary" to add your first dictionary.
+          dictionary:
+            view_live_html: View this dictionary live <br/><em>(opens in a new window)</em>
+            edit: Edit this dictionary
+            delete: Remove this dictionary forever
+      dictionaries:
+        show:
+          other: Other Dictionaries
+  activerecord:
+    attributes:
+      'refinery/dictionaries/dictionary':
+        classname: Classname
+        createdon: Createdon
+        name: Name
+        localname: Localname
+        parent: Parent
+        external_id: External

@@ -11,7 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218152411) do
+ActiveRecord::Schema.define(:version => 20130116005707) do
+
+  create_table "refinery_collections", :force => true do |t|
+    t.string   "tag"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_dictionaries", :force => true do |t|
+    t.string   "classname"
+    t.datetime "createdon"
+    t.string   "name"
+    t.string   "localname"
+    t.integer  "parent_id"
+    t.integer  "external_id"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "refinery_dictionary_collection_elements", :force => true do |t|
+    t.integer  "dictionary_id"
+    t.integer  "collection_id"
+    t.integer  "position"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -86,6 +113,17 @@ ActiveRecord::Schema.define(:version => 20121218152411) do
   add_index "refinery_pages", ["lft"], :name => "index_refinery_pages_on_lft"
   add_index "refinery_pages", ["parent_id"], :name => "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], :name => "index_refinery_pages_on_rgt"
+
+  create_table "refinery_realestateobjects", :force => true do |t|
+    t.integer  "complex_id"
+    t.integer  "collection_id"
+    t.string   "name"
+    t.integer  "status"
+    t.decimal  "price"
+    t.integer  "position"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"

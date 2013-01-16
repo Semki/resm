@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::DictionaryCollectionElements::Admin::DictionaryCollectionElementsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.dictionary_collection_elements_admin_dictionary_collection_elements_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_dictionary_collection_elements_admin_dictionary_collection_element_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::DictionaryCollectionElements::Admin::DictionaryCollectionElementsController.sortable? && ::Refinery::DictionaryCollectionElements::DictionaryCollectionElement.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Dictionary Collection Elements"),
+                 refinery.dictionary_collection_elements_admin_dictionary_collection_elements_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Dictionary Collection Elements"),
+                 refinery.dictionary_collection_elements_admin_dictionary_collection_elements_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

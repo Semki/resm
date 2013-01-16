@@ -1,0 +1,23 @@
+<%= form_for [refinery, :dictionary_collection_elements_admin, @dictionary_collection_element] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @dictionary_collection_element,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :dictionary -%>
+    <%= f.text_field :dictionary, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :collection -%>
+    <%= f.text_field :collection  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.dictionary_collection_elements.admin.dictionary_collection_elements.dictionary_collection_element'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete') %>
+<% end -%>

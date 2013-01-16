@@ -1,0 +1,31 @@
+fr:
+  refinery:
+    plugins:
+      realestateobjects:
+        title: Realestateobjects
+    realestateobjects:
+      admin:
+        realestateobjects:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Realestateobject
+            reorder: Réordonner les Realestateobjects
+            reorder_done: Fin de réordonnancement des Realestateobjects
+          records:
+            title: Realestateobjects
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Realestateobject. Cliquer sur "Créer un(e) nouve(au/l/lle) Realestateobject" pour créer votre premi(er/ère) realestateobject.'
+          realestateobject:
+            view_live_html: Voir ce(t/tte) realestateobject <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) realestateobject
+            delete: Supprimer définitivement ce(t/tte) realestateobject
+      realestateobjects:
+        show:
+          other: Autres Realestateobjects
+  activerecord:
+    attributes:
+      'refinery/realestateobjects/realestateobject':
+        complex: Complex
+        collection: Collection
+        name: Name
+        status: Status
+        price: Price

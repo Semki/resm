@@ -8,3 +8,15 @@
 
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
+
+# Added by Refinery CMS Realestateobjects extension
+Refinery::Realestateobjects::Engine.load_seed
+
+# Added by Refinery CMS Dictionaries extension
+Refinery::Dictionaries::Engine.load_seed
+
+# Added by Refinery CMS Collections extension
+Refinery::Collections::Engine.load_seed
+
+# Added by Refinery CMS Dictionary Collection Elements extension
+Refinery::DictionaryCollectionElements::Engine.load_seed

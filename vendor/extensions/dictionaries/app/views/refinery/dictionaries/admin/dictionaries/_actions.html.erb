@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Dictionaries::Admin::DictionariesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.dictionaries_admin_dictionaries_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_dictionaries_admin_dictionary_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Dictionaries::Admin::DictionariesController.sortable? && ::Refinery::Dictionaries::Dictionary.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Dictionaries"),
+                 refinery.dictionaries_admin_dictionaries_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Dictionaries"),
+                 refinery.dictionaries_admin_dictionaries_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

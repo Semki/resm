@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      realestateobjects:
+        title: Realestateobjects
+    realestateobjects:
+      admin:
+        realestateobjects:
+          actions:
+            create_new: Lag en ny Realestateobject
+            reorder: Endre rekkefølgen på Realestateobjects
+            reorder_done: Ferdig å endre rekkefølgen Realestateobjects
+          records:
+            title: Realestateobjects
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Realestateobjects enda. Klikk på "Lag en ny Realestateobject" for å legge til din første realestateobject.
+          realestateobject:
+            view_live_html: Vis hvordan denne realestateobject ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne realestateobject
+            delete: Fjern denne realestateobject permanent
+      realestateobjects:
+        show:
+          other: Andre Realestateobjects
+  activerecord:
+    attributes:
+      'refinery/realestateobjects/realestateobject':
+        complex: Complex
+        collection: Collection
+        name: Name
+        status: Status
+        price: Price

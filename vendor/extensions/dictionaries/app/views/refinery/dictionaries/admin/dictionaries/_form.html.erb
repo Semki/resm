@@ -1,0 +1,47 @@
+<%= form_for [refinery, :dictionaries_admin, @dictionary] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @dictionary,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :classname -%>
+    <%= f.text_field :classname, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :createdon -%>
+    <%= f.datetime_select :createdon  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :localname -%>
+    <%= f.text_field :localname  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :parent -%>
+    <%= f.text_field :parent  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :external_id -%>
+    <%= f.number_field :external_id  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.dictionaries.admin.dictionaries.dictionary'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @dictionary.classname) %>
+<% end -%>

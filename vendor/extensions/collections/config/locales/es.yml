@@ -1,0 +1,28 @@
+es:
+  refinery:
+    plugins:
+      collections:
+        title: Collections
+#        article: masculino/femenino
+    collections:
+      admin:
+        collections:
+          actions:
+            create_new: Crear nuevo collection
+            reorder: Reordenar collections
+            reorder_done: Reordenación de collections completada
+          records:
+            title: Collections
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay collections todavía. Pulsa en "Crear nuevo Collection" para crear tu primer collection.
+          collection:
+            view_live_html: Ver este collection como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este collection
+            delete: Borrar este collection para siempre
+      collections:
+        show:
+          other: Otros collections
+  activerecord:
+    attributes:
+      'refinery/collections/collection':
+        tag: Tag

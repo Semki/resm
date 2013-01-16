@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      realestateobjects:
+        title: Realestateobjects
+    realestateobjects:
+      admin:
+        realestateobjects:
+          actions:
+            create_new: Maak een nieuwe Realestateobject
+            reorder: Wijzig de volgorde van de Realestateobjects
+            reorder_done: Klaar met het wijzingen van de volgorde van de Realestateobjects
+          records:
+            title: Realestateobjects
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Realestateobjects. Druk op 'Maak een nieuwe Realestateobject' om de eerste aan te maken.
+          realestateobject:
+            view_live_html: Bekijk deze realestateobject op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze realestateobject
+            delete: Verwijder deze realestateobject voor eeuwig
+      realestateobjects:
+        show:
+          other: Andere Realestateobjects
+  activerecord:
+    attributes:
+      'refinery/realestateobjects/realestateobject':
+        complex: Complex
+        collection: Collection
+        name: Name
+        status: Status
+        price: Price

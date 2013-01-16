@@ -1,0 +1,51 @@
+<% content_for :body_content_title do %>
+  <%= @realestateobject.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Complex</h1>
+    <p>
+      <%=raw @realestateobject.complex %>
+    </p>
+  </section>
+  <section>
+    <h1>Collection</h1>
+    <p>
+      <%=raw @realestateobject.collection %>
+    </p>
+  </section>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @realestateobject.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Status</h1>
+    <p>
+      <%=raw @realestateobject.status %>
+    </p>
+  </section>
+  <section>
+    <h1>Price</h1>
+    <p>
+      <%=raw @realestateobject.price %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="realestateobjects">
+      <% @realestateobjects.each do |realestateobject| %>
+        <li>
+          <%= link_to realestateobject.name, refinery.realestateobjects_realestateobject_path(realestateobject) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
