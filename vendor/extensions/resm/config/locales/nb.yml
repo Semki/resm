@@ -1,0 +1,53 @@
+nb:
+  refinery:
+    plugins:
+      collections:
+        title: Collections
+      real_estate_objects:
+        title: Real Estate Objects
+    resm:
+      admin:
+        collections:
+          actions:
+            create_new: Lag en ny Collection
+            reorder: Endre rekkefølgen på Collections
+            reorder_done: Ferdig å endre rekkefølgen Collections
+          records:
+            title: Collections
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Collections enda. Klikk på "Lag en ny Collection"
+              for å legge til din første collection.
+          collection:
+            view_live_html: Vis hvordan denne collection ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne collection
+            delete: Fjern denne collection permanent
+        real_estate_objects:
+          actions:
+            create_new: Lag en ny Real Estate Object
+            reorder: Endre rekkefølgen på Real Estate Objects
+            reorder_done: Ferdig å endre rekkefølgen Real Estate Objects
+          records:
+            title: Real Estate Objects
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Real Estate Objects enda. Klikk på "Lag en
+              ny Real Estate Object" for å legge til din første real estate object.
+          real_estate_object:
+            view_live_html: Vis hvordan denne real estate object ser ut offentlig
+              <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne real estate object
+            delete: Fjern denne real estate object permanent
+      collections:
+        show:
+          other: Andre Collections
+      real_estate_objects:
+        show:
+          other: Andre Real Estate Objects
+  activerecord:
+    attributes:
+      refinery/resm/collection:
+        name: Name
+      refinery/resm/real_estate_object:
+        name: Name
+        price: Price
+        collection_id: Collection

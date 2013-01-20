@@ -8,3 +8,9 @@
 
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
+
+# Added by Refinery CMS Real Estate Objects extension
+Refinery::Resm::Engine.load_seed
+
+# Added by Refinery CMS Collections extension
+Refinery::Resm::Engine.load_seed

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218152411) do
+ActiveRecord::Schema.define(:version => 20130120135748) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -86,6 +86,33 @@ ActiveRecord::Schema.define(:version => 20121218152411) do
   add_index "refinery_pages", ["lft"], :name => "index_refinery_pages_on_lft"
   add_index "refinery_pages", ["parent_id"], :name => "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], :name => "index_refinery_pages_on_rgt"
+
+  create_table "refinery_resm_collection_translations", :force => true do |t|
+    t.integer  "refinery_resm_collection_id"
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+  end
+
+  add_index "refinery_resm_collection_translations", ["locale"], :name => "index_refinery_resm_collection_translations_on_locale"
+  add_index "refinery_resm_collection_translations", ["refinery_resm_collection_id"], :name => "index_54c68166e914713c8c28ce690de3d39aa1f3e1a8"
+
+  create_table "refinery_resm_collections", :force => true do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_resm_real_estate_objects", :force => true do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.integer  "collection_id"
+    t.integer  "position"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"

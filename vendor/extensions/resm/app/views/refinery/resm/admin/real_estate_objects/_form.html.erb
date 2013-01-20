@@ -1,0 +1,29 @@
+<%= form_for [refinery, :resm_admin, @real_estate_object] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @real_estate_object,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :price -%>
+    <%= f.text_field :price  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :collection_id -%>
+    <%= f.select :collection_id, Refinery::Resm::Collection.all.collect {|el| [el.name, el.id]}  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.real_estate_objects.admin.real_estate_objects.real_estate_object'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @real_estate_object.name) %>
+<% end -%>

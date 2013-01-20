@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="real_estate_objects">
+    <% @real_estate_objects.each do |real_estate_object| %>
+      <li>
+        <%= link_to real_estate_object.name, refinery.resm_real_estate_object_path(real_estate_object) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

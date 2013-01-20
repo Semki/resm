@@ -1,0 +1,52 @@
+en:
+  refinery:
+    plugins:
+      collections:
+        title: Collections
+      real_estate_objects:
+        title: Real Estate Objects
+    resm:
+      admin:
+        collections:
+          actions:
+            create_new: Add New Collection
+            reorder: Reorder Collections
+            reorder_done: Done Reordering Collections
+          records:
+            title: Collections
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Collections yet. Click "Add New Collection"
+              to add your first collection.
+          collection:
+            view_live_html: View this collection live <br/><em>(opens in a new window)</em>
+            edit: Edit this collection
+            delete: Remove this collection forever
+        real_estate_objects:
+          actions:
+            create_new: Add New Real Estate Object
+            reorder: Reorder Real Estate Objects
+            reorder_done: Done Reordering Real Estate Objects
+          records:
+            title: Real Estate Objects
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Real Estate Objects yet. Click "Add New Real
+              Estate Object" to add your first real estate object.
+          real_estate_object:
+            view_live_html: View this real estate object live <br/><em>(opens in a
+              new window)</em>
+            edit: Edit this real estate object
+            delete: Remove this real estate object forever
+      collections:
+        show:
+          other: Other Collections
+      real_estate_objects:
+        show:
+          other: Other Real Estate Objects
+  activerecord:
+    attributes:
+      refinery/resm/collection:
+        name: Name
+      refinery/resm/real_estate_object:
+        name: Name
+        price: Price
+        collection_id: Collection

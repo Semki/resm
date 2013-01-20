@@ -3,3 +3,4 @@
 
 en:
   hello: "Hello world"
+  empty_collection_name: "Empty"

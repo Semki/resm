@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="collections">
+    <% @collections.each do |collection| %>
+      <li>
+        <%= link_to collection.name, refinery.resm_collection_path(collection) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

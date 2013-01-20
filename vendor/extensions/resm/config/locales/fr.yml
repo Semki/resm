@@ -1,0 +1,54 @@
+fr:
+  refinery:
+    plugins:
+      collections:
+        title: Collections
+      real_estate_objects:
+        title: Real Estate Objects
+    resm:
+      admin:
+        collections:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Collection
+            reorder: Réordonner les Collections
+            reorder_done: Fin de réordonnancement des Collections
+          records:
+            title: Collections
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Collection. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Collection" pour créer votre premi(er/ère) collection.
+          collection:
+            view_live_html: Voir ce(t/tte) collection <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) collection
+            delete: Supprimer définitivement ce(t/tte) collection
+        real_estate_objects:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Real Estate Object
+            reorder: Réordonner les Real Estate Objects
+            reorder_done: Fin de réordonnancement des Real Estate Objects
+          records:
+            title: Real Estate Objects
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Real Estate Object. Cliquer
+              sur "Créer un(e) nouve(au/l/lle) Real Estate Object" pour créer votre
+              premi(er/ère) real estate object.
+          real_estate_object:
+            view_live_html: Voir ce(t/tte) real estate object <br/><em>(Ouvre une
+              nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) real estate object
+            delete: Supprimer définitivement ce(t/tte) real estate object
+      collections:
+        show:
+          other: Autres Collections
+      real_estate_objects:
+        show:
+          other: Autres Real Estate Objects
+  activerecord:
+    attributes:
+      refinery/resm/collection:
+        name: Name
+      refinery/resm/real_estate_object:
+        name: Name
+        price: Price
+        collection_id: Collection
