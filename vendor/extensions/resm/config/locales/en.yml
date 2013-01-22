@@ -1,12 +1,45 @@
 en:
   refinery:
     plugins:
+      dictionary_items:
+        title: Dictionary Items
+      dictionaries:
+        title: Dictionaries
       collections:
         title: Collections
       real_estate_objects:
         title: Real Estate Objects
     resm:
       admin:
+        dictionary_items:
+          actions:
+            create_new: Add New Dictionary Item
+            reorder: Reorder Dictionary Items
+            reorder_done: Done Reordering Dictionary Items
+          records:
+            title: Dictionary Items
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Dictionary Items yet. Click "Add New Dictionary
+              Item" to add your first dictionary item.
+          dictionary_item:
+            view_live_html: View this dictionary item live <br/><em>(opens in a new
+              window)</em>
+            edit: Edit this dictionary item
+            delete: Remove this dictionary item forever
+        dictionaries:
+          actions:
+            create_new: Add New Dictionary
+            reorder: Reorder Dictionaries
+            reorder_done: Done Reordering Dictionaries
+          records:
+            title: Dictionaries
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Dictionaries yet. Click "Add New Dictionary"
+              to add your first dictionary.
+          dictionary:
+            view_live_html: View this dictionary live <br/><em>(opens in a new window)</em>
+            edit: Edit this dictionary
+            delete: Remove this dictionary forever
         collections:
           actions:
             create_new: Add New Collection
@@ -36,6 +69,12 @@ en:
               new window)</em>
             edit: Edit this real estate object
             delete: Remove this real estate object forever
+      dictionary_items:
+        show:
+          other: Other Dictionary Items
+      dictionaries:
+        show:
+          other: Other Dictionaries
       collections:
         show:
           other: Other Collections
@@ -44,6 +83,13 @@ en:
           other: Other Real Estate Objects
   activerecord:
     attributes:
+      refinery/resm/dictionary_item:
+        key: Key
+        value: Value
+        parent: Parent
+        dictionary: Dictionary
+      refinery/resm/dictionary:
+        name: Name
       refinery/resm/collection:
         name: Name
       refinery/resm/real_estate_object:

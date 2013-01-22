@@ -14,3 +14,9 @@ Refinery::Resm::Engine.load_seed
 
 # Added by Refinery CMS Collections extension
 Refinery::Resm::Engine.load_seed
+
+# Added by Refinery CMS Dictionaries extension
+Refinery::Resm::Engine.load_seed
+
+# Added by Refinery CMS Dictionary Items extension
+Refinery::Resm::Engine.load_seed

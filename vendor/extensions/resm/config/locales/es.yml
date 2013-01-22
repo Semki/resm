@@ -1,12 +1,46 @@
 es:
   refinery:
     plugins:
+      dictionary_items:
+        title: Dictionary Items
+      dictionaries:
+        title: Dictionaries
       collections:
         title: Collections
       real_estate_objects:
         title: Real Estate Objects
     resm:
       admin:
+        dictionary_items:
+          actions:
+            create_new: Crear nuevo dictionary item
+            reorder: Reordenar dictionary items
+            reorder_done: Reordenación de dictionary items completada
+          records:
+            title: Dictionary Items
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay dictionary items todavía. Pulsa en "Crear nuevo Dictionary
+              Item" para crear tu primer dictionary item.
+          dictionary_item:
+            view_live_html: Ver este dictionary item como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este dictionary item
+            delete: Borrar este dictionary item para siempre
+        dictionaries:
+          actions:
+            create_new: Crear nuevo dictionary
+            reorder: Reordenar dictionaries
+            reorder_done: Reordenación de dictionaries completada
+          records:
+            title: Dictionaries
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay dictionaries todavía. Pulsa en "Crear nuevo Dictionary"
+              para crear tu primer dictionary.
+          dictionary:
+            view_live_html: Ver este dictionary como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este dictionary
+            delete: Borrar este dictionary para siempre
         collections:
           actions:
             create_new: Crear nuevo collection
@@ -37,6 +71,12 @@ es:
               en ventana nueva)</em>
             edit: Editar este real estate object
             delete: Borrar este real estate object para siempre
+      dictionary_items:
+        show:
+          other: Otros dictionary items
+      dictionaries:
+        show:
+          other: Otros dictionaries
       collections:
         show:
           other: Otros collections
@@ -45,6 +85,13 @@ es:
           other: Otros real estate objects
   activerecord:
     attributes:
+      refinery/resm/dictionary_item:
+        key: Key
+        value: Value
+        parent: Parent
+        dictionary: Dictionary
+      refinery/resm/dictionary:
+        name: Name
       refinery/resm/collection:
         name: Name
       refinery/resm/real_estate_object:

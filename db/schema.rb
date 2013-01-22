@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130120135748) do
+ActiveRecord::Schema.define(:version => 20130122125212) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -104,6 +104,34 @@ ActiveRecord::Schema.define(:version => 20130120135748) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "refinery_resm_dictionaries", :force => true do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_resm_dictionary_items", :force => true do |t|
+    t.string   "key"
+    t.string   "value"
+    t.integer  "parent_id"
+    t.integer  "dictionary_id"
+    t.integer  "position"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "refinery_resm_dictionary_translations", :force => true do |t|
+    t.integer  "refinery_resm_dictionary_id"
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+  end
+
+  add_index "refinery_resm_dictionary_translations", ["locale"], :name => "index_refinery_resm_dictionary_translations_on_locale"
+  add_index "refinery_resm_dictionary_translations", ["refinery_resm_dictionary_id"], :name => "index_e454dbdec6985b6ec1d3d136ab4a33a48f04e783"
 
   create_table "refinery_resm_real_estate_objects", :force => true do |t|
     t.string   "name"

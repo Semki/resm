@@ -1,12 +1,46 @@
 nb:
   refinery:
     plugins:
+      dictionary_items:
+        title: Dictionary Items
+      dictionaries:
+        title: Dictionaries
       collections:
         title: Collections
       real_estate_objects:
         title: Real Estate Objects
     resm:
       admin:
+        dictionary_items:
+          actions:
+            create_new: Lag en ny Dictionary Item
+            reorder: Endre rekkefølgen på Dictionary Items
+            reorder_done: Ferdig å endre rekkefølgen Dictionary Items
+          records:
+            title: Dictionary Items
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Dictionary Items enda. Klikk på "Lag en ny
+              Dictionary Item" for å legge til din første dictionary item.
+          dictionary_item:
+            view_live_html: Vis hvordan denne dictionary item ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne dictionary item
+            delete: Fjern denne dictionary item permanent
+        dictionaries:
+          actions:
+            create_new: Lag en ny Dictionary
+            reorder: Endre rekkefølgen på Dictionaries
+            reorder_done: Ferdig å endre rekkefølgen Dictionaries
+          records:
+            title: Dictionaries
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Dictionaries enda. Klikk på "Lag en ny Dictionary"
+              for å legge til din første dictionary.
+          dictionary:
+            view_live_html: Vis hvordan denne dictionary ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne dictionary
+            delete: Fjern denne dictionary permanent
         collections:
           actions:
             create_new: Lag en ny Collection
@@ -37,6 +71,12 @@ nb:
               <br/><em>(åpner i et nytt vindu)</em>
             edit: Rediger denne real estate object
             delete: Fjern denne real estate object permanent
+      dictionary_items:
+        show:
+          other: Andre Dictionary Items
+      dictionaries:
+        show:
+          other: Andre Dictionaries
       collections:
         show:
           other: Andre Collections
@@ -45,6 +85,13 @@ nb:
           other: Andre Real Estate Objects
   activerecord:
     attributes:
+      refinery/resm/dictionary_item:
+        key: Key
+        value: Value
+        parent: Parent
+        dictionary: Dictionary
+      refinery/resm/dictionary:
+        name: Name
       refinery/resm/collection:
         name: Name
       refinery/resm/real_estate_object:

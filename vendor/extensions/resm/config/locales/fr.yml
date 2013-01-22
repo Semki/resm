@@ -1,12 +1,47 @@
 fr:
   refinery:
     plugins:
+      dictionary_items:
+        title: Dictionary Items
+      dictionaries:
+        title: Dictionaries
       collections:
         title: Collections
       real_estate_objects:
         title: Real Estate Objects
     resm:
       admin:
+        dictionary_items:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Dictionary Item
+            reorder: Réordonner les Dictionary Items
+            reorder_done: Fin de réordonnancement des Dictionary Items
+          records:
+            title: Dictionary Items
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Dictionary Item. Cliquer
+              sur "Créer un(e) nouve(au/l/lle) Dictionary Item" pour créer votre premi(er/ère)
+              dictionary item.
+          dictionary_item:
+            view_live_html: Voir ce(t/tte) dictionary item <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) dictionary item
+            delete: Supprimer définitivement ce(t/tte) dictionary item
+        dictionaries:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Dictionary
+            reorder: Réordonner les Dictionaries
+            reorder_done: Fin de réordonnancement des Dictionaries
+          records:
+            title: Dictionaries
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Dictionary. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Dictionary" pour créer votre premi(er/ère) dictionary.
+          dictionary:
+            view_live_html: Voir ce(t/tte) dictionary <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) dictionary
+            delete: Supprimer définitivement ce(t/tte) dictionary
         collections:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Collection
@@ -38,6 +73,12 @@ fr:
               nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) real estate object
             delete: Supprimer définitivement ce(t/tte) real estate object
+      dictionary_items:
+        show:
+          other: Autres Dictionary Items
+      dictionaries:
+        show:
+          other: Autres Dictionaries
       collections:
         show:
           other: Autres Collections
@@ -46,6 +87,13 @@ fr:
           other: Autres Real Estate Objects
   activerecord:
     attributes:
+      refinery/resm/dictionary_item:
+        key: Key
+        value: Value
+        parent: Parent
+        dictionary: Dictionary
+      refinery/resm/dictionary:
+        name: Name
       refinery/resm/collection:
         name: Name
       refinery/resm/real_estate_object:

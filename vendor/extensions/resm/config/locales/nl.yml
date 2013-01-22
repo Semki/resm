@@ -1,12 +1,47 @@
 nl:
   refinery:
     plugins:
+      dictionary_items:
+        title: Dictionary Items
+      dictionaries:
+        title: Dictionaries
       collections:
         title: Collections
       real_estate_objects:
         title: Real Estate Objects
     resm:
       admin:
+        dictionary_items:
+          actions:
+            create_new: Maak een nieuwe Dictionary Item
+            reorder: Wijzig de volgorde van de Dictionary Items
+            reorder_done: Klaar met het wijzingen van de volgorde van de Dictionary
+              Items
+          records:
+            title: Dictionary Items
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Dictionary Items. Druk op 'Maak een nieuwe
+              Dictionary Item' om de eerste aan te maken.
+          dictionary_item:
+            view_live_html: Bekijk deze dictionary item op de website <br/><em>(opent
+              een nieuw venster)</em>
+            edit: Bewerk deze dictionary item
+            delete: Verwijder deze dictionary item voor eeuwig
+        dictionaries:
+          actions:
+            create_new: Maak een nieuwe Dictionary
+            reorder: Wijzig de volgorde van de Dictionaries
+            reorder_done: Klaar met het wijzingen van de volgorde van de Dictionaries
+          records:
+            title: Dictionaries
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Dictionaries. Druk op 'Maak een nieuwe
+              Dictionary' om de eerste aan te maken.
+          dictionary:
+            view_live_html: Bekijk deze dictionary op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze dictionary
+            delete: Verwijder deze dictionary voor eeuwig
         collections:
           actions:
             create_new: Maak een nieuwe Collection
@@ -38,6 +73,12 @@ nl:
               een nieuw venster)</em>
             edit: Bewerk deze real estate object
             delete: Verwijder deze real estate object voor eeuwig
+      dictionary_items:
+        show:
+          other: Andere Dictionary Items
+      dictionaries:
+        show:
+          other: Andere Dictionaries
       collections:
         show:
           other: Andere Collections
@@ -46,6 +87,13 @@ nl:
           other: Andere Real Estate Objects
   activerecord:
     attributes:
+      refinery/resm/dictionary_item:
+        key: Key
+        value: Value
+        parent: Parent
+        dictionary: Dictionary
+      refinery/resm/dictionary:
+        name: Name
       refinery/resm/collection:
         name: Name
       refinery/resm/real_estate_object:

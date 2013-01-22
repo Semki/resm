@@ -1,12 +1,46 @@
 sk:
   refinery:
     plugins:
+      dictionary_items:
+        title: Dictionary Items
+      dictionaries:
+        title: Dictionaries
       collections:
         title: Collections
       real_estate_objects:
         title: Real Estate Objects
     resm:
       admin:
+        dictionary_items:
+          actions:
+            create_new: Pridať Dictionary Item
+            reorder: Preusporiadať Dictionary Items
+            reorder_done: Koniec radenia Dictionary Items
+          records:
+            title: Dictionary Items
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Dictionary Items. Kliknite na "Pridať
+              Dictionary Item" pre pridanie prvého dictionary item.
+          dictionary_item:
+            view_live_html: Zobraziť náhľad dictionary item<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť dictionary item
+            delete: Zmazať dictionary item
+        dictionaries:
+          actions:
+            create_new: Pridať Dictionary
+            reorder: Preusporiadať Dictionaries
+            reorder_done: Koniec radenia Dictionaries
+          records:
+            title: Dictionaries
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Dictionaries. Kliknite na "Pridať
+              Dictionary" pre pridanie prvého dictionary.
+          dictionary:
+            view_live_html: Zobraziť náhľad dictionary<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť dictionary
+            delete: Zmazať dictionary
         collections:
           actions:
             create_new: Pridať Collection
@@ -37,6 +71,12 @@ sk:
               v novom okne)</em>
             edit: Upraviť real estate object
             delete: Zmazať real estate object
+      dictionary_items:
+        show:
+          other: Daľšie Dictionary Items
+      dictionaries:
+        show:
+          other: Daľšie Dictionaries
       collections:
         show:
           other: Daľšie Collections
@@ -45,6 +85,13 @@ sk:
           other: Daľšie Real Estate Objects
   activerecord:
     attributes:
+      refinery/resm/dictionary_item:
+        key: Key
+        value: Value
+        parent: Parent
+        dictionary: Dictionary
+      refinery/resm/dictionary:
+        name: Name
       refinery/resm/collection:
         name: Name
       refinery/resm/real_estate_object:
