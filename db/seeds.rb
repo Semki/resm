@@ -20,3 +20,6 @@ Refinery::Resm::Engine.load_seed
 
 # Added by Refinery CMS Dictionary Items extension
 Refinery::Resm::Engine.load_seed
+
+# Added by Refinery CMS Collection Items extension
+Refinery::Resm::Engine.load_seed

@@ -1,0 +1,23 @@
+<%= form_for [refinery, :resm_admin, @collection_item] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @collection_item,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :collection -%>
+    <%= f.select :collection_id, options_from_collection_for_select(Refinery::Resm::Collection.all, :id, :name) -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :dictionary_item -%>
+    <%= f.select :dictionary_item_id, options_from_collection_for_select(Refinery::Resm::DictionaryItem.all, :id, :key) -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.collection_items.admin.collection_items.collection_item'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete') %>
+<% end -%>

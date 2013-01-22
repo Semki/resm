@@ -1,6 +1,8 @@
 en:
   refinery:
     plugins:
+      collection_items:
+        title: Collection Items
       dictionary_items:
         title: Dictionary Items
       dictionaries:
@@ -11,6 +13,21 @@ en:
         title: Real Estate Objects
     resm:
       admin:
+        collection_items:
+          actions:
+            create_new: Add New Collection Item
+            reorder: Reorder Collection Items
+            reorder_done: Done Reordering Collection Items
+          records:
+            title: Collection Items
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Collection Items yet. Click "Add New Collection
+              Item" to add your first collection item.
+          collection_item:
+            view_live_html: View this collection item live <br/><em>(opens in a new
+              window)</em>
+            edit: Edit this collection item
+            delete: Remove this collection item forever
         dictionary_items:
           actions:
             create_new: Add New Dictionary Item
@@ -69,6 +86,9 @@ en:
               new window)</em>
             edit: Edit this real estate object
             delete: Remove this real estate object forever
+      collection_items:
+        show:
+          other: Other Collection Items
       dictionary_items:
         show:
           other: Other Dictionary Items
@@ -83,6 +103,9 @@ en:
           other: Other Real Estate Objects
   activerecord:
     attributes:
+      refinery/resm/collection_item:
+        collection: Collection
+        dictionary_item: Dictionary Item
       refinery/resm/dictionary_item:
         key: Key
         value: Value

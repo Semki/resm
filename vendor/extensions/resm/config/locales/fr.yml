@@ -1,6 +1,8 @@
 fr:
   refinery:
     plugins:
+      collection_items:
+        title: Collection Items
       dictionary_items:
         title: Dictionary Items
       dictionaries:
@@ -11,6 +13,22 @@ fr:
         title: Real Estate Objects
     resm:
       admin:
+        collection_items:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Collection Item
+            reorder: Réordonner les Collection Items
+            reorder_done: Fin de réordonnancement des Collection Items
+          records:
+            title: Collection Items
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Collection Item. Cliquer
+              sur "Créer un(e) nouve(au/l/lle) Collection Item" pour créer votre premi(er/ère)
+              collection item.
+          collection_item:
+            view_live_html: Voir ce(t/tte) collection item <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) collection item
+            delete: Supprimer définitivement ce(t/tte) collection item
         dictionary_items:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Dictionary Item
@@ -73,6 +91,9 @@ fr:
               nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) real estate object
             delete: Supprimer définitivement ce(t/tte) real estate object
+      collection_items:
+        show:
+          other: Autres Collection Items
       dictionary_items:
         show:
           other: Autres Dictionary Items
@@ -87,6 +108,9 @@ fr:
           other: Autres Real Estate Objects
   activerecord:
     attributes:
+      refinery/resm/collection_item:
+        collection: Collection
+        dictionary_item: Dictionary Item
       refinery/resm/dictionary_item:
         key: Key
         value: Value

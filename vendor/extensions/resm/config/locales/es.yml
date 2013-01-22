@@ -1,6 +1,8 @@
 es:
   refinery:
     plugins:
+      collection_items:
+        title: Collection Items
       dictionary_items:
         title: Dictionary Items
       dictionaries:
@@ -11,6 +13,21 @@ es:
         title: Real Estate Objects
     resm:
       admin:
+        collection_items:
+          actions:
+            create_new: Crear nuevo collection item
+            reorder: Reordenar collection items
+            reorder_done: Reordenación de collection items completada
+          records:
+            title: Collection Items
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay collection items todavía. Pulsa en "Crear nuevo Collection
+              Item" para crear tu primer collection item.
+          collection_item:
+            view_live_html: Ver este collection item como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este collection item
+            delete: Borrar este collection item para siempre
         dictionary_items:
           actions:
             create_new: Crear nuevo dictionary item
@@ -71,6 +88,9 @@ es:
               en ventana nueva)</em>
             edit: Editar este real estate object
             delete: Borrar este real estate object para siempre
+      collection_items:
+        show:
+          other: Otros collection items
       dictionary_items:
         show:
           other: Otros dictionary items
@@ -85,6 +105,9 @@ es:
           other: Otros real estate objects
   activerecord:
     attributes:
+      refinery/resm/collection_item:
+        collection: Collection
+        dictionary_item: Dictionary Item
       refinery/resm/dictionary_item:
         key: Key
         value: Value

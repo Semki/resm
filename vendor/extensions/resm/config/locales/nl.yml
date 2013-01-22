@@ -1,6 +1,8 @@
 nl:
   refinery:
     plugins:
+      collection_items:
+        title: Collection Items
       dictionary_items:
         title: Dictionary Items
       dictionaries:
@@ -11,6 +13,22 @@ nl:
         title: Real Estate Objects
     resm:
       admin:
+        collection_items:
+          actions:
+            create_new: Maak een nieuwe Collection Item
+            reorder: Wijzig de volgorde van de Collection Items
+            reorder_done: Klaar met het wijzingen van de volgorde van de Collection
+              Items
+          records:
+            title: Collection Items
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Collection Items. Druk op 'Maak een nieuwe
+              Collection Item' om de eerste aan te maken.
+          collection_item:
+            view_live_html: Bekijk deze collection item op de website <br/><em>(opent
+              een nieuw venster)</em>
+            edit: Bewerk deze collection item
+            delete: Verwijder deze collection item voor eeuwig
         dictionary_items:
           actions:
             create_new: Maak een nieuwe Dictionary Item
@@ -73,6 +91,9 @@ nl:
               een nieuw venster)</em>
             edit: Bewerk deze real estate object
             delete: Verwijder deze real estate object voor eeuwig
+      collection_items:
+        show:
+          other: Andere Collection Items
       dictionary_items:
         show:
           other: Andere Dictionary Items
@@ -87,6 +108,9 @@ nl:
           other: Andere Real Estate Objects
   activerecord:
     attributes:
+      refinery/resm/collection_item:
+        collection: Collection
+        dictionary_item: Dictionary Item
       refinery/resm/dictionary_item:
         key: Key
         value: Value

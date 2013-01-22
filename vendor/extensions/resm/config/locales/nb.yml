@@ -1,6 +1,8 @@
 nb:
   refinery:
     plugins:
+      collection_items:
+        title: Collection Items
       dictionary_items:
         title: Dictionary Items
       dictionaries:
@@ -11,6 +13,21 @@ nb:
         title: Real Estate Objects
     resm:
       admin:
+        collection_items:
+          actions:
+            create_new: Lag en ny Collection Item
+            reorder: Endre rekkefølgen på Collection Items
+            reorder_done: Ferdig å endre rekkefølgen Collection Items
+          records:
+            title: Collection Items
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Collection Items enda. Klikk på "Lag en ny
+              Collection Item" for å legge til din første collection item.
+          collection_item:
+            view_live_html: Vis hvordan denne collection item ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne collection item
+            delete: Fjern denne collection item permanent
         dictionary_items:
           actions:
             create_new: Lag en ny Dictionary Item
@@ -71,6 +88,9 @@ nb:
               <br/><em>(åpner i et nytt vindu)</em>
             edit: Rediger denne real estate object
             delete: Fjern denne real estate object permanent
+      collection_items:
+        show:
+          other: Andre Collection Items
       dictionary_items:
         show:
           other: Andre Dictionary Items
@@ -85,6 +105,9 @@ nb:
           other: Andre Real Estate Objects
   activerecord:
     attributes:
+      refinery/resm/collection_item:
+        collection: Collection
+        dictionary_item: Dictionary Item
       refinery/resm/dictionary_item:
         key: Key
         value: Value
