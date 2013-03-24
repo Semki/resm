@@ -1,0 +1,6 @@
+rails g refinery:engine CollectionItem \
+\
+dictionary_item_id:integer collection_id:integer \
+\
+--namespace=resm \
+--extension=resm

@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="complexes">
+    <% @complexes.each do |complex| %>
+      <li>
+        <%= link_to complex.group_name, refinery.resm_complex_path(complex) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

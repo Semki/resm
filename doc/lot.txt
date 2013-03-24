@@ -1,0 +1,7 @@
+rails g refinery:engine Lot \
+\
+lot_code:string group_id:integer company_id:integer bathscount:integer bedscount:integer lot_type:integer category_type:integer deal_type:integer tenants:integer tip_location:integer price_sale:integer price_rent_short:integer rent_period_start:date rent_period_end:date price_rent_long:integer invest_price:integer invest_share:integer geo_country:integer geo_region:integer geo_subregion:integer geo_cantone:integer geo_city:integer geo_district:integer building_stage:integer land_density_res:integer land_density_com:integer accm_type:integer beach_dist_lot:integer beach_dist:integer availability_sale:integer availability_rent:integer features:integer pool_type:integer pool_heated:boolean parking_type:integer finishing_type:integer ground_bedroom:boolean area_covered:integer area_live:integer area_plot:integer area_land:integer area_veranda_c:integer area_veranda_u:integer area_basement:integer area_garden:integer area_roof:integer area_parking:integer built_date:integer built_duration:integer built_deliverydate:date levels_building:integer levels_lot:integer gps_lat:integer gps_lon:integer \
+\
+--i18n=lot_code \
+--namespace=resm \
+--extension=resm

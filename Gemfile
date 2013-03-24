@@ -59,3 +59,5 @@ gem 'fog'
 group :production do
 	gem 'pg'
 end
+
+gem 'refinerycms-resm', :path => 'vendor/extensions'

@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Resm::Admin::LotsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.resm_admin_lots_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_resm_admin_lot_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Resm::Admin::LotsController.sortable? && ::Refinery::Resm::Lot.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Lots"),
+                 refinery.resm_admin_lots_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Lots"),
+                 refinery.resm_admin_lots_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

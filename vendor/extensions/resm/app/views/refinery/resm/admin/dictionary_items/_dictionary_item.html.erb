@@ -1,0 +1,32 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(dictionary_item) -%>">
+  <span class='title'>
+    <%= dictionary_item.name %>
+
+    <% if Refinery.i18n_enabled? and Refinery::I18n.frontend_locales.many? %>
+      <span class='preview'>
+        <% dictionary_item.translations.each do |translation| %>
+          <% if translation.name.present? %>
+            <%= link_to refinery_icon_tag("flags/#{translation.locale}.png", :size => '16x11'),
+                         refinery.edit_resm_admin_dictionary_item_path(dictionary_item, :switch_locale => translation.locale),
+                         :class => 'locale' %>
+          <% end %>
+        <% end %>
+      </span>
+    <% end %>
+
+  </span>
+  <span class='actions'>
+    
+    <%= link_to refinery_icon_tag("application_go.png"), refinery.resm_dictionary_item_path(dictionary_item),
+        :title => t('.view_live_html'),
+        :target => "_blank" %>
+    
+    <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_resm_admin_dictionary_item_path(dictionary_item),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), refinery.resm_admin_dictionary_item_path(dictionary_item),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :confirm => t('message', :scope => 'refinery.admin.delete', :title => dictionary_item.name),
+        :method => :delete %>
+  </span>
+</li>

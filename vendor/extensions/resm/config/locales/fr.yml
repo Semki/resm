@@ -1,0 +1,232 @@
+fr:
+  refinery:
+    plugins:
+      collections:
+        title: Collections
+      collection_items:
+        title: Collection Items
+      dictionaries:
+        title: Dictionaries
+      dictionary_items:
+        title: Dictionary Items
+      complexes:
+        title: Complexes
+      lots:
+        title: Lots
+    resm:
+      admin:
+        collections:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Collection
+            reorder: Réordonner les Collections
+            reorder_done: Fin de réordonnancement des Collections
+          records:
+            title: Collections
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Collection. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Collection" pour créer votre premi(er/ère) collection.
+          collection:
+            view_live_html: Voir ce(t/tte) collection <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) collection
+            delete: Supprimer définitivement ce(t/tte) collection
+        collection_items:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Collection Item
+            reorder: Réordonner les Collection Items
+            reorder_done: Fin de réordonnancement des Collection Items
+          records:
+            title: Collection Items
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Collection Item. Cliquer
+              sur "Créer un(e) nouve(au/l/lle) Collection Item" pour créer votre premi(er/ère)
+              collection item.
+          collection_item:
+            view_live_html: Voir ce(t/tte) collection item <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) collection item
+            delete: Supprimer définitivement ce(t/tte) collection item
+        dictionaries:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Dictionary
+            reorder: Réordonner les Dictionaries
+            reorder_done: Fin de réordonnancement des Dictionaries
+          records:
+            title: Dictionaries
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Dictionary. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Dictionary" pour créer votre premi(er/ère) dictionary.
+          dictionary:
+            view_live_html: Voir ce(t/tte) dictionary <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) dictionary
+            delete: Supprimer définitivement ce(t/tte) dictionary
+        dictionary_items:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Dictionary Item
+            reorder: Réordonner les Dictionary Items
+            reorder_done: Fin de réordonnancement des Dictionary Items
+          records:
+            title: Dictionary Items
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Dictionary Item. Cliquer
+              sur "Créer un(e) nouve(au/l/lle) Dictionary Item" pour créer votre premi(er/ère)
+              dictionary item.
+          dictionary_item:
+            view_live_html: Voir ce(t/tte) dictionary item <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) dictionary item
+            delete: Supprimer définitivement ce(t/tte) dictionary item
+        complexes:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Complex
+            reorder: Réordonner les Complexes
+            reorder_done: Fin de réordonnancement des Complexes
+          records:
+            title: Complexes
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Complex. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Complex" pour créer votre premi(er/ère) complex.
+          complex:
+            view_live_html: Voir ce(t/tte) complex <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) complex
+            delete: Supprimer définitivement ce(t/tte) complex
+        lots:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Lot
+            reorder: Réordonner les Lots
+            reorder_done: Fin de réordonnancement des Lots
+          records:
+            title: Lots
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Lot. Cliquer sur "Créer un(e)
+              nouve(au/l/lle) Lot" pour créer votre premi(er/ère) lot.
+          lot:
+            view_live_html: Voir ce(t/tte) lot <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) lot
+            delete: Supprimer définitivement ce(t/tte) lot
+      collections:
+        show:
+          other: Autres Collections
+      collection_items:
+        show:
+          other: Autres Collection Items
+      dictionaries:
+        show:
+          other: Autres Dictionaries
+      dictionary_items:
+        show:
+          other: Autres Dictionary Items
+      complexes:
+        show:
+          other: Autres Complexes
+      lots:
+        show:
+          other: Autres Lots
+  activerecord:
+    attributes:
+      refinery/resm/collection:
+        name: Name
+      refinery/resm/collection_item:
+        dictionary_item_id: Dictionary Item
+        collection_id: Collection
+      refinery/resm/dictionary:
+        name: Name
+        key: Key
+      refinery/resm/dictionary_item:
+        name: Name
+        dictionary_id: Dictionary
+        key: Key
+      refinery/resm/complex:
+        group_name: Group Name
+        group_type: Group Type
+        company_id: Company
+        tip_location: Tip Location
+        price_sale_group: Price Sale Group
+        invest_price_group: Invest Price Group
+        invest_share_group: Invest Share Group
+        geo_country: Geo Country
+        geo_region: Geo Region
+        geo_subregion: Geo Subregion
+        geo_cantone: Geo Cantone
+        geo_city: Geo City
+        geo_district: Geo District
+        building_stage_group: Building Stage Group
+        land_density_res_group: Land Density Res Group
+        land_density_com_group: Land Density Com Group
+        beach_dist: Beach Dist
+        availability_group_sale: Availability Group Sale
+        availability_group_rent: Availability Group Rent
+        group_block: Group Block
+        features: Features
+        pool_type_group: Pool Type Group
+        pool_heated_group: Pool Heated Group
+        parking_type_group: Parking Type Group
+        parking_levels: Parking Levels
+        area_total_group: Area Total Group
+        area_basement_group: Area Basement Group
+        area_garden: Area Garden
+        area_roof: Area Roof
+        area_parking_group: Area Parking Group
+        built_date_group: Built Date Group
+        built_duration_group: Built Duration Group
+        built_deliverydate_group: Built Deliverydate Group
+        levels_building: Levels Building
+        levels_lot: Levels Lot
+        gps_lat_group: Gps Lat Group
+        gps_lon_group: Gps Lon Group
+      refinery/resm/lot:
+        lot_code: Lot Code
+        group_id: Group
+        company_id: Company
+        bathscount: Bathscount
+        bedscount: Bedscount
+        lot_type: Lot Type
+        category_type: Category Type
+        deal_type: Deal Type
+        tenants: Tenants
+        tip_location: Tip Location
+        price_sale: Price Sale
+        price_rent_short: Price Rent Short
+        rent_period_start: Rent Period Start
+        rent_period_end: Rent Period End
+        price_rent_long: Price Rent Long
+        invest_price: Invest Price
+        invest_share: Invest Share
+        geo_country: Geo Country
+        geo_region: Geo Region
+        geo_subregion: Geo Subregion
+        geo_cantone: Geo Cantone
+        geo_city: Geo City
+        geo_district: Geo District
+        building_stage: Building Stage
+        land_density_res: Land Density Res
+        land_density_com: Land Density Com
+        accm_type: Accm Type
+        beach_dist_lot: Beach Dist Lot
+        beach_dist: Beach Dist
+        availability_sale: Availability Sale
+        availability_rent: Availability Rent
+        features: Features
+        pool_type: Pool Type
+        pool_heated: Pool Heated
+        parking_type: Parking Type
+        finishing_type: Finishing Type
+        ground_bedroom: Ground Bedroom
+        area_covered: Area Covered
+        area_live: Area Live
+        area_plot: Area Plot
+        area_land: Area Land
+        area_veranda_c: Area Veranda C
+        area_veranda_u: Area Veranda U
+        area_basement: Area Basement
+        area_garden: Area Garden
+        area_roof: Area Roof
+        area_parking: Area Parking
+        built_date: Built Date
+        built_duration: Built Duration
+        built_deliverydate: Built Deliverydate
+        levels_building: Levels Building
+        levels_lot: Levels Lot
+        gps_lat: Gps Lat
+        gps_lon: Gps Lon

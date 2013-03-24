@@ -1,0 +1,228 @@
+en:
+  refinery:
+    plugins:
+      collections:
+        title: Collections
+      collection_items:
+        title: Collection Items
+      dictionaries:
+        title: Dictionaries
+      dictionary_items:
+        title: Dictionary Items
+      complexes:
+        title: Complexes
+      lots:
+        title: Lots
+    resm:
+      admin:
+        collections:
+          actions:
+            create_new: Add New Collection
+            reorder: Reorder Collections
+            reorder_done: Done Reordering Collections
+          records:
+            title: Collections
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Collections yet. Click "Add New Collection"
+              to add your first collection.
+          collection:
+            view_live_html: View this collection live <br/><em>(opens in a new window)</em>
+            edit: Edit this collection
+            delete: Remove this collection forever
+        collection_items:
+          actions:
+            create_new: Add New Collection Item
+            reorder: Reorder Collection Items
+            reorder_done: Done Reordering Collection Items
+          records:
+            title: Collection Items
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Collection Items yet. Click "Add New Collection
+              Item" to add your first collection item.
+          collection_item:
+            view_live_html: View this collection item live <br/><em>(opens in a new
+              window)</em>
+            edit: Edit this collection item
+            delete: Remove this collection item forever
+        dictionaries:
+          actions:
+            create_new: Add New Dictionary
+            reorder: Reorder Dictionaries
+            reorder_done: Done Reordering Dictionaries
+          records:
+            title: Dictionaries
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Dictionaries yet. Click "Add New Dictionary"
+              to add your first dictionary.
+          dictionary:
+            view_live_html: View this dictionary live <br/><em>(opens in a new window)</em>
+            edit: Edit this dictionary
+            delete: Remove this dictionary forever
+        dictionary_items:
+          actions:
+            create_new: Add New Dictionary Item
+            reorder: Reorder Dictionary Items
+            reorder_done: Done Reordering Dictionary Items
+          records:
+            title: Dictionary Items
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Dictionary Items yet. Click "Add New Dictionary
+              Item" to add your first dictionary item.
+          dictionary_item:
+            view_live_html: View this dictionary item live <br/><em>(opens in a new
+              window)</em>
+            edit: Edit this dictionary item
+            delete: Remove this dictionary item forever
+        complexes:
+          actions:
+            create_new: Add New Complex
+            reorder: Reorder Complexes
+            reorder_done: Done Reordering Complexes
+          records:
+            title: Complexes
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Complexes yet. Click "Add New Complex" to add
+              your first complex.
+          complex:
+            view_live_html: View this complex live <br/><em>(opens in a new window)</em>
+            edit: Edit this complex
+            delete: Remove this complex forever
+        lots:
+          actions:
+            create_new: Add New Lot
+            reorder: Reorder Lots
+            reorder_done: Done Reordering Lots
+          records:
+            title: Lots
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Lots yet. Click "Add New Lot" to add your first
+              lot.
+          lot:
+            view_live_html: View this lot live <br/><em>(opens in a new window)</em>
+            edit: Edit this lot
+            delete: Remove this lot forever
+      collections:
+        show:
+          other: Other Collections
+      collection_items:
+        show:
+          other: Other Collection Items
+      dictionaries:
+        show:
+          other: Other Dictionaries
+      dictionary_items:
+        show:
+          other: Other Dictionary Items
+      complexes:
+        show:
+          other: Other Complexes
+      lots:
+        show:
+          other: Other Lots
+  activerecord:
+    attributes:
+      refinery/resm/collection:
+        name: Name
+      refinery/resm/collection_item:
+        dictionary_item_id: Dictionary Item
+        collection_id: Collection
+      refinery/resm/dictionary:
+        name: Name
+        key: Key
+      refinery/resm/dictionary_item:
+        name: Name
+        dictionary_id: Dictionary
+        key: Key
+      refinery/resm/complex:
+        group_name: Group Name
+        group_type: Group Type
+        company_id: Company
+        tip_location: Tip Location
+        price_sale_group: Price Sale Group
+        invest_price_group: Invest Price Group
+        invest_share_group: Invest Share Group
+        geo_country: Geo Country
+        geo_region: Geo Region
+        geo_subregion: Geo Subregion
+        geo_cantone: Geo Cantone
+        geo_city: Geo City
+        geo_district: Geo District
+        building_stage_group: Building Stage Group
+        land_density_res_group: Land Density Res Group
+        land_density_com_group: Land Density Com Group
+        beach_dist: Beach Dist
+        availability_group_sale: Availability Group Sale
+        availability_group_rent: Availability Group Rent
+        group_block: Group Block
+        features: Features
+        pool_type_group: Pool Type Group
+        pool_heated_group: Pool Heated Group
+        parking_type_group: Parking Type Group
+        parking_levels: Parking Levels
+        area_total_group: Area Total Group
+        area_basement_group: Area Basement Group
+        area_garden: Area Garden
+        area_roof: Area Roof
+        area_parking_group: Area Parking Group
+        built_date_group: Built Date Group
+        built_duration_group: Built Duration Group
+        built_deliverydate_group: Built Deliverydate Group
+        levels_building: Levels Building
+        levels_lot: Levels Lot
+        gps_lat_group: Gps Lat Group
+        gps_lon_group: Gps Lon Group
+      refinery/resm/lot:
+        lot_code: Lot Code
+        group_id: Group
+        company_id: Company
+        bathscount: Bathscount
+        bedscount: Bedscount
+        lot_type: Lot Type
+        category_type: Category Type
+        deal_type: Deal Type
+        tenants: Tenants
+        tip_location: Tip Location
+        price_sale: Price Sale
+        price_rent_short: Price Rent Short
+        rent_period_start: Rent Period Start
+        rent_period_end: Rent Period End
+        price_rent_long: Price Rent Long
+        invest_price: Invest Price
+        invest_share: Invest Share
+        geo_country: Geo Country
+        geo_region: Geo Region
+        geo_subregion: Geo Subregion
+        geo_cantone: Geo Cantone
+        geo_city: Geo City
+        geo_district: Geo District
+        building_stage: Building Stage
+        land_density_res: Land Density Res
+        land_density_com: Land Density Com
+        accm_type: Accm Type
+        beach_dist_lot: Beach Dist Lot
+        beach_dist: Beach Dist
+        availability_sale: Availability Sale
+        availability_rent: Availability Rent
+        features: Features
+        pool_type: Pool Type
+        pool_heated: Pool Heated
+        parking_type: Parking Type
+        finishing_type: Finishing Type
+        ground_bedroom: Ground Bedroom
+        area_covered: Area Covered
+        area_live: Area Live
+        area_plot: Area Plot
+        area_land: Area Land
+        area_veranda_c: Area Veranda C
+        area_veranda_u: Area Veranda U
+        area_basement: Area Basement
+        area_garden: Area Garden
+        area_roof: Area Roof
+        area_parking: Area Parking
+        built_date: Built Date
+        built_duration: Built Duration
+        built_deliverydate: Built Deliverydate
+        levels_building: Levels Building
+        levels_lot: Levels Lot
+        gps_lat: Gps Lat
+        gps_lon: Gps Lon

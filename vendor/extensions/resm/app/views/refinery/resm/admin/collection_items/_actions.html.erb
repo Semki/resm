@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Resm::Admin::CollectionItemsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.resm_admin_collection_items_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_resm_admin_collection_item_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Resm::Admin::CollectionItemsController.sortable? && ::Refinery::Resm::CollectionItem.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Collection Items"),
+                 refinery.resm_admin_collection_items_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Collection Items"),
+                 refinery.resm_admin_collection_items_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

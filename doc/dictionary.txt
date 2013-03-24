@@ -1,0 +1,7 @@
+rails g refinery:engine Dictionary \
+\
+name:string key:string \
+\
+--i18n=name \
+--namespace=resm \
+--extension=resm

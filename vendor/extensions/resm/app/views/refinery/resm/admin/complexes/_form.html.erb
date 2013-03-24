@@ -1,0 +1,236 @@
+<%= form_for [refinery, :resm_admin, @complex] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @complex,
+              :include_object_name => true %>
+
+  <%= render "locale_picker",
+              :current_locale => Thread.current[:globalize_locale] if Refinery.i18n_enabled? %>
+
+  
+  <div class='field'>
+    <%= f.label :group_name -%>
+    <%= f.text_field :group_name, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :group_type -%>
+    <%= f.number_field :group_type  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :company_id -%>
+    <%= f.number_field :company_id  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :tip_location -%>
+    <%= f.number_field :tip_location  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :price_sale_group -%>
+    <%= f.number_field :price_sale_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :invest_price_group -%>
+    <%= f.number_field :invest_price_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :invest_share_group -%>
+    <%= f.number_field :invest_share_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :geo_country -%>
+    <%= f.number_field :geo_country  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :geo_region -%>
+    <%= f.number_field :geo_region  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :geo_subregion -%>
+    <%= f.number_field :geo_subregion  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :geo_cantone -%>
+    <%= f.number_field :geo_cantone  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :geo_city -%>
+    <%= f.number_field :geo_city  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :geo_district -%>
+    <%= f.number_field :geo_district  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :building_stage_group -%>
+    <%= f.number_field :building_stage_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :land_density_res_group -%>
+    <%= f.number_field :land_density_res_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :land_density_com_group -%>
+    <%= f.number_field :land_density_com_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :beach_dist -%>
+    <%= f.number_field :beach_dist  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :availability_group_sale -%>
+    <%= f.number_field :availability_group_sale  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :availability_group_rent -%>
+    <%= f.number_field :availability_group_rent  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :group_block -%>
+    <%= f.number_field :group_block  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :features -%>
+    <%= f.number_field :features  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :pool_type_group -%>
+    <%= f.number_field :pool_type_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :pool_heated_group -%>
+    <%= f.check_box :pool_heated_group, :checked => @complex[:pool_heated_group]  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :parking_type_group -%>
+    <%= f.number_field :parking_type_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :parking_levels -%>
+    <%= f.number_field :parking_levels  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :area_total_group -%>
+    <%= f.number_field :area_total_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :area_basement_group -%>
+    <%= f.number_field :area_basement_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :area_garden -%>
+    <%= f.number_field :area_garden  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :area_roof -%>
+    <%= f.number_field :area_roof  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :area_parking_group -%>
+    <%= f.number_field :area_parking_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :built_date_group -%>
+    <%= f.number_field :built_date_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :built_duration_group -%>
+    <%= f.number_field :built_duration_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :built_deliverydate_group -%>
+    <%= f.date_select :built_deliverydate_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :levels_building -%>
+    <%= f.number_field :levels_building  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :levels_lot -%>
+    <%= f.number_field :levels_lot  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :gps_lat_group -%>
+    <%= f.number_field :gps_lat_group  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :gps_lon_group -%>
+    <%= f.number_field :gps_lon_group  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.complexes.admin.complexes.complex'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @complex.group_name) %>
+<% end -%>

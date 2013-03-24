@@ -1,0 +1,7 @@
+rails g refinery:engine Complex \
+\
+group_name:string group_type:integer company_id:integer tip_location:integer price_sale_group:integer invest_price_group:integer invest_share_group:integer geo_country:integer geo_region:integer geo_subregion:integer geo_cantone:integer geo_city:integer geo_district:integer building_stage_group:integer land_density_res_group:integer land_density_com_group:integer beach_dist:integer availability_group_sale:integer availability_group_rent:integer group_block:integer features:integer pool_type_group:integer pool_heated_group:boolean parking_type_group:integer parking_levels:integer area_total_group:integer area_basement_group:integer area_garden:integer area_roof:integer area_parking_group:integer built_date_group:integer built_duration_group:integer built_deliverydate_group:date levels_building:integer levels_lot:integer gps_lat_group:integer gps_lon_group:integer \
+\
+--i18n=group_name \
+--namespace=resm \
+--extension=resm

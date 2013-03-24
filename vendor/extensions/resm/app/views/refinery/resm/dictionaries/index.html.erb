@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="dictionaries">
+    <% @dictionaries.each do |dictionary| %>
+      <li>
+        <%= link_to dictionary.name, refinery.resm_dictionary_path(dictionary) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,7 @@
+rails g refinery:engine DictionaryItem \
+\
+name:string dictionary_id:integer key:string \
+\
+--i18n=name \
+--namespace=resm \
+--extension=resm

@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @dictionary_item.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @dictionary_item.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Dictionary</h1>
+    <p>
+      <%=raw @dictionary_item.dictionary_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Key</h1>
+    <p>
+      <%=raw @dictionary_item.key %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="dictionary_items">
+      <% @dictionary_items.each do |dictionary_item| %>
+        <li>
+          <%= link_to dictionary_item.name, refinery.resm_dictionary_item_path(dictionary_item) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

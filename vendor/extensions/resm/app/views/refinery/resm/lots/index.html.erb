@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="lots">
+    <% @lots.each do |lot| %>
+      <li>
+        <%= link_to lot.lot_code, refinery.resm_lot_path(lot) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>
