@@ -4,6 +4,8 @@ module Refinery
 
       attr_accessible :name, :dictionary_id, :key, :position
 
+      belongs_to :dictionary
+
       translates :name
 
       class Translation

@@ -15,7 +15,7 @@
   
   <div class='field'>
     <%= f.label :group_type -%>
-    <%= f.select :group_type, options_from_collection_for_select(self.get_items_by_dictionary(:group_type), :id, :name) -%>
+    <%= f.select :group_type, options_from_collection_for_select(get_items_by_dictionary(:group_type), :id, :name) -%>
 
   </div>
   
@@ -27,7 +27,7 @@
   
   <div class='field'>
     <%= f.label :tip_location -%>
-    <%= f.select :tip_location, options_from_collection_for_select(self.get_items_by_dictionary(:tip_location), :id, :name) -%>
+    <%= f.select :tip_location, options_from_collection_for_select(get_items_by_dictionary(:tip_location), :id, :name) -%>
 
   </div>
   

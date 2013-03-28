@@ -4,6 +4,8 @@ module Refinery
 
       attr_accessible :name, :key, :position
 
+      has_many :dictionary_items
+
       translates :name
 
       class Translation
@@ -15,8 +17,9 @@ module Refinery
       validates :name, :presence => true, :uniqueness => true
 
       def self.get_items_by_key(key)
+        items = []
         dictionary = Refinery::Resm::Dictionary.where(:key => key).first
-        items = Refinery::Resm::DictionaryItem.where(:dictionary_id => dictionary).all
+        items = dictionary.dictionary_items unless dictionary.nil?
         items
       end
     end
