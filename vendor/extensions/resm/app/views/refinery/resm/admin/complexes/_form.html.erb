@@ -15,7 +15,7 @@
   
   <div class='field'>
     <%= f.label :group_type -%>
-    <%= f.number_field :group_type  -%>
+    <%= f.select :group_type, options_from_collection_for_select(self.get_items_by_dictionary(:group_type), :id, :name) -%>
 
   </div>
   
@@ -27,7 +27,7 @@
   
   <div class='field'>
     <%= f.label :tip_location -%>
-    <%= f.number_field :tip_location  -%>
+    <%= f.select :tip_location, options_from_collection_for_select(self.get_items_by_dictionary(:tip_location), :id, :name) -%>
 
   </div>
   
@@ -51,43 +51,43 @@
   
   <div class='field'>
     <%= f.label :geo_country -%>
-    <%= f.number_field :geo_country  -%>
+    <%= f.select :geo_country, options_from_collection_for_select(self.get_items_by_dictionary(:geo_country), :id, :name) -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :geo_region -%>
-    <%= f.number_field :geo_region  -%>
+    <%= f.select :geo_region, options_from_collection_for_select(self.get_items_by_dictionary(:geo_region), :id, :name) -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :geo_subregion -%>
-    <%= f.number_field :geo_subregion  -%>
+    <%= f.select :geo_subregion, options_from_collection_for_select(self.get_items_by_dictionary(:geo_subregion), :id, :name) -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :geo_cantone -%>
-    <%= f.number_field :geo_cantone  -%>
+    <%= f.select :geo_cantone, options_from_collection_for_select(self.get_items_by_dictionary(:geo_cantone), :id, :name) -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :geo_city -%>
-    <%= f.number_field :geo_city  -%>
+    <%= f.select :geo_city, options_from_collection_for_select(self.get_items_by_dictionary(:geo_city), :id, :name) -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :geo_district -%>
-    <%= f.number_field :geo_district  -%>
+    <%= f.select :geo_district, options_from_collection_for_select(self.get_items_by_dictionary(:geo_district), :id, :name) -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :building_stage_group -%>
-    <%= f.number_field :building_stage_group  -%>
+    <%= f.select :building_stage_group, options_from_collection_for_select(self.get_items_by_dictionary(:building_stage_group), :id, :name) -%>
 
   </div>
   
@@ -111,31 +111,31 @@
   
   <div class='field'>
     <%= f.label :availability_group_sale -%>
-    <%= f.number_field :availability_group_sale  -%>
+    <%= f.select :availability_group_sale, options_from_collection_for_select(self.get_items_by_dictionary(:availability_group_sale), :id, :name) -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :availability_group_rent -%>
-    <%= f.number_field :availability_group_rent  -%>
+    <%= f.select :availability_group_rent, options_from_collection_for_select(self.get_items_by_dictionary(:availability_group_rent), :id, :name) -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :group_block -%>
-    <%= f.number_field :group_block  -%>
+    <%= f.select :group_block, options_from_collection_for_select(self.get_items_by_dictionary(:group_block), :id, :name) -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :features -%>
-    <%= f.number_field :features  -%>
+    <%= f.select :features, options_from_collection_for_select(self.get_items_by_dictionary(:features), :id, :name) -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :pool_type_group -%>
-    <%= f.number_field :pool_type_group  -%>
+    <%= f.select :pool_type_group, options_from_collection_for_select(self.get_items_by_dictionary(:pool_type_group), :id, :name) -%>
 
   </div>
   
@@ -147,7 +147,7 @@
   
   <div class='field'>
     <%= f.label :parking_type_group -%>
-    <%= f.number_field :parking_type_group  -%>
+    <%= f.select :parking_type_group, options_from_collection_for_select(self.get_items_by_dictionary(:parking_type_group), :id, :name) -%>
 
   </div>
   
