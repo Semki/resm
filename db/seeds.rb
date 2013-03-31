@@ -57,7 +57,7 @@ dictionary3.dictionary_items.create!(name:"reserved")
 dictionary3.dictionary_items.create!(name:"sold")
 
 dictionary3 = Refinery::Resm::Dictionary.create!(name: "pool type", key: :pool_type)
-dictionary3.dictionary_items.create!(name:"general")
+dictionary3.dictionary_items.create!(name:"common")
 dictionary3.dictionary_items.create!(name:"private")
 dictionary3.dictionary_items.create!(name:"child")
 dictionary3.dictionary_items.create!(name:"sport")
