@@ -6,7 +6,7 @@ module Refinery
 
       belongs_to :dictionary
 
-      translates :name
+      translates :name, :default => translates(:name, config.I18n.default_locale)
 
       class Translation
         attr_accessible :locale
