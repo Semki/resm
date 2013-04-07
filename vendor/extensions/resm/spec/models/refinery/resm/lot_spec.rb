@@ -3,6 +3,8 @@ require 'spec_helper'
 module Refinery
   module Resm
     describe Lot do
+      it {should have_one(:collection)}
+
       describe "validations" do
         subject do
           FactoryGirl.create(:lot,

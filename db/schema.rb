@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130324132722) do
+ActiveRecord::Schema.define(:version => 20130403161930) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -111,7 +111,10 @@ ActiveRecord::Schema.define(:version => 20130324132722) do
     t.integer  "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "lot_id"
   end
+
+  add_index "refinery_resm_collections", ["lot_id"], :name => "index_refinery_resm_collections_on_lot_id"
 
   create_table "refinery_resm_complex_translations", :force => true do |t|
     t.integer  "refinery_resm_complex_id"

@@ -103,7 +103,7 @@ describe Refinery do
 
                 visit refinery.resm_admin_dictionary_items_path
                 within ".actions" do
-                  click_link "Edit this dictionary_item"
+                  click_link "Edit this dictionary item"
                 end
                 within "#switch_locale_picker" do
                   click_link "Cs"

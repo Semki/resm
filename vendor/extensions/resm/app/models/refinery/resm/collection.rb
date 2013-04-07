@@ -2,7 +2,10 @@ module Refinery
   module Resm
     class Collection < Refinery::Core::BaseModel
 
-      attr_accessible :name, :position
+      attr_accessible :name, :position, :lot_id
+
+      belongs_to :lot
+      has_many :collection_items
 
       translates :name
 

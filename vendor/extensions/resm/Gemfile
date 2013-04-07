@@ -3,6 +3,7 @@ source "http://rubygems.org"
 gemspec
 
 gem 'refinerycms', '~> 2.0.3'
+gem 'refinerycms-i18n', '~> 2.0.0'
 
 # Database Configuration
 platforms :jruby do
@@ -14,12 +15,13 @@ end
 
 platforms :ruby do
   gem 'sqlite3'
-  gem 'mysql2'
-  gem 'pg'
+  #gem 'mysql2'
+  #gem 'pg'
 end
 
 group :development, :test do
   gem 'refinerycms-testing', '~> 2.0.3'
+  gem 'shoulda-matchers'
   gem 'guard-rspec', '~> 0.7.0'
 
   platforms :mswin, :mingw do
