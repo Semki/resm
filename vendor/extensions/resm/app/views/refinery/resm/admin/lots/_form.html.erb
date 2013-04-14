@@ -330,7 +330,66 @@
     <%= f.number_field :gps_lon  -%>
 
   </div>
-  
+    <div id="features_block">
+      <%= f.label :features -%>
+
+      <% if @lot.collection == nil || @lot.collection.collection_items.empty? %>
+          <div class='field features'>
+            <%= select_tag :dictionary_id, options_from_collection_for_select(@dictionaries, :id, :name), include_blank: true, class: :dictionary, id: :dictionary1 %>
+            <%= select_tag :dictionary_item_id, "", class: :dictionary_item, id: :dictionary1_item, name: "collection_items[1]" %>
+            <%= button_tag "+", class: :add_new_feature %>
+          </div>
+      <% else %>
+
+          <% @lot.collection.collection_items.each_with_index do |item, idx| %>
+              <div class='field features'>
+                <%= select_tag :dictionary_id, options_from_collection_for_select(@dictionaries, :id, :name,item.dictionary_item.dictionary.id), include_blank: true, class: :dictionary, id: :dictionary1 %>
+                <%= select_tag :dictionary_item_id, options_from_collection_for_select(item.dictionary_item.dictionary.dictionary_items, :id, :name), class: :dictionary_item, id: "dictionary#{idx}_item", name: "collection_items[#{idx}]" %>
+                <%= button_tag "+", class: :add_new_feature %>
+              </div>
+          <% end %>
+      <% end %>
+    </div>
+
+    <script>
+        var dictionary = <%= @dictionaries.to_json(include: :dictionary_items).html_safe()  %>;
+        $(function() {
+            $("#features_block").delegate(".dictionary", "change", function(event) {
+                var selected_dictionary_id = this.selectedOptions[0].value;
+                var selected_dictionary = null;
+
+                dictionary.forEach(function(dict) {
+                    if (dict.id == selected_dictionary_id) {
+                        selected_dictionary = dict;
+                    }
+                });
+
+                $("#" + this.id + "_item")[0].options.length = 0;
+                if (selected_dictionary != null) {
+                    var items_selector = $("#" + this.id + "_item")[0];
+                    selected_dictionary.dictionary_items.forEach(function(item) {
+                        items_selector.options[items_selector.options.length] = new Option(item.name, item.id);
+                    });
+                }
+
+            });
+
+            $("#features_block").delegate(".add_new_feature", "click", function(event) {
+               event.preventDefault();
+               var next_id = $(".features").length + 1;
+               var feature = $(".features").first().clone(true);
+               var dictionary = feature.find(".dictionary");
+               dictionary.attr("id", "dictionary" + next_id);
+               dictionary[0].options[0].selected = true;
+               var dictionary_item = feature.find(".dictionary_item");
+               dictionary_item.attr("id", "dictionary" + next_id + "_item");
+               dictionary_item.attr("name", "collection_items["+next_id+"]");
+               dictionary_item[0].options.length = 0;
+               feature.appendTo("#features_block");
+            });
+        });
+    </script>
+
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.lots.admin.lots.lot'),

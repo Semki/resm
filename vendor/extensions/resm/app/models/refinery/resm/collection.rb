@@ -4,8 +4,8 @@ module Refinery
 
       attr_accessible :name, :position, :lot_id
 
-      belongs_to :lot
-      has_many :collection_items
+      belongs_to :lot, autosave: true
+      has_many :collection_items, autosave: true
 
       translates :name
 
