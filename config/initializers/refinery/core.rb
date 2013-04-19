@@ -48,4 +48,5 @@ Refinery::Core.configure do |config|
 
   # Register extra stylesheet for backend (optional options)
   # config.register_stylesheet "custom", :media => 'screen'
+  config.register_stylesheet "admin_additions", :media => 'screen'
 end

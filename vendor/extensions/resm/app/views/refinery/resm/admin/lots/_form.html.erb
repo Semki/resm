@@ -321,15 +321,18 @@
   
   <div class='field'>
     <%= f.label :gps_lat -%>
-    <%= f.number_field :gps_lat  -%>
+    <%= f.text_field :gps_lat  -%>
 
   </div>
   
   <div class='field'>
     <%= f.label :gps_lon -%>
-    <%= f.number_field :gps_lon  -%>
+    <%= f.text_field :gps_lon -%>
 
   </div>
+  <div id="map_canvas" class="gmap"></div>
+
+
     <div id="features_block">
       <%= f.label :features -%>
 
@@ -351,44 +354,15 @@
       <% end %>
     </div>
 
+
     <script>
         var dictionary = <%= @dictionaries.to_json(include: :dictionary_items).html_safe()  %>;
-        $(function() {
-            $("#features_block").delegate(".dictionary", "change", function(event) {
-                var selected_dictionary_id = this.selectedOptions[0].value;
-                var selected_dictionary = null;
-
-                dictionary.forEach(function(dict) {
-                    if (dict.id == selected_dictionary_id) {
-                        selected_dictionary = dict;
-                    }
-                });
-
-                $("#" + this.id + "_item")[0].options.length = 0;
-                if (selected_dictionary != null) {
-                    var items_selector = $("#" + this.id + "_item")[0];
-                    selected_dictionary.dictionary_items.forEach(function(item) {
-                        items_selector.options[items_selector.options.length] = new Option(item.name, item.id);
-                    });
-                }
-
-            });
-
-            $("#features_block").delegate(".add_new_feature", "click", function(event) {
-               event.preventDefault();
-               var next_id = $(".features").length + 1;
-               var feature = $(".features").first().clone(true);
-               var dictionary = feature.find(".dictionary");
-               dictionary.attr("id", "dictionary" + next_id);
-               dictionary[0].options[0].selected = true;
-               var dictionary_item = feature.find(".dictionary_item");
-               dictionary_item.attr("id", "dictionary" + next_id + "_item");
-               dictionary_item.attr("name", "collection_items["+next_id+"]");
-               dictionary_item[0].options.length = 0;
-               feature.appendTo("#features_block");
-            });
-        });
     </script>
+
+    <% content_for :javascripts do %>
+        <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false' %>
+        <%= javascript_include_tag 'admin_additions' %>
+    <% end %>
 
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
