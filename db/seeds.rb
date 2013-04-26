@@ -14,6 +14,7 @@ Refinery::Resm::Engine.load_seed
 
 Refinery::Resm::DictionaryItem.delete_all
 Refinery::Resm::Dictionary.destroy_all
+Refinery::Resm::Collection.destroy_all
 
 
 dictionary = Refinery::Resm::Dictionary.create!(name: "accm type", key: :accm_type)
@@ -96,3 +97,6 @@ dictionary3.dictionary_items.create!(name:"sauna")
 dictionary3.dictionary_items.create!(name:"outdoor jakuzzi")
 dictionary3.dictionary_items.create!(name:"free wi-fi")
 
+
+# Added by Refinery CMS News engine
+Refinery::News::Engine.load_seed
