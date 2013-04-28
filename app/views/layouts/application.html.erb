@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+
+  <body class="l-page_inner">
+    <%= #site_bar
+    %>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container" class="l-page">
+      <header id="header" class="b-head">
+        <%= render '/refinery/header' -%>
+      </header>
+      <nav >
+        <%= render '/refinery/menu' -%>
+      </nav>
+      <section id="page" class="b-content">
+        <%= yield %>
+      </section>
+      <div class="clearer"></div>
+    </div>
+      <footer class="b-footer">
+        <nav class="b-footer__l">
+          <%= render '/refinery/menu' -%>
+        </nav>
+        <%= render '/refinery/footer' -%>
+      </footer>
+    <div class="b-overlay"></div>
+    <%= render '/refinery/javascripts' %>
+  </body>
+</html>

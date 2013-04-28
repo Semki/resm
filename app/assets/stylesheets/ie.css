@@ -1,0 +1,30 @@
+.b-head__auth-menu .s, .b-icon, .b-mainmenu__item, .b-label, .b-garants__item__link span, .b-btn, .b-special__item, .b-select_inline, .b-filter__item, .b-props__item span, .b-slideshow__previews .item, .b-villa-available li, .b-rating, .b-darr, .b-uarr, .b-more {
+	display: inline;
+	zoom: 1;
+}
+
+/*
+:first-child {
+	
+	zoom: expression(
+        	runtimeStyle.zoom = 1,
+       		firstChild.className = firstChild.className + " first-child");	
+    ); 
+}
+*/
+.b-label, .b-tabs li, .b-list li, .b-more, .b-section-menu, .b-section-menu__item {
+	zoom: expression(
+       	runtimeStyle.zoom = 1,
+    	insertBefore(createElement("ie-before"), firstChild),
+		appendChild(createElement("ie-after"))
+ 		);
+}
+
+.b-select {
+    background:none;
+    border:none;
+}
+
+    .b-select__l {
+        margin-right: 0;
+    }

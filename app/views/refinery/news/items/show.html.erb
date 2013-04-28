@@ -1,6 +1,5 @@
 <% content_for :body_content_title, @item.title %>
-<% content_for :body_content_left do %>
-  <article class="news_item">
+<% content_for :body do %>
     <p>
       <small><%= t('.published') %> <%= l(@item.publish_date, :format => :long) %></small>
     </p>
@@ -9,23 +8,34 @@
         <small><%= t('.source') %> <%= @item.source %></small>
       </p>
     <% end %>
+    <% if @item.images.size > 0 %>
+        <a href="<%= @item.images.first.url%>" class="b-fancybox f-right js-fancyBoxGallery" rel="gallery-1">
+          <img src="<%= @item.images.first.thumbnail("220x220").url %>" alt="" class="b-fancybox__poster" />
+          <div class="b-fancybox__t">Смотреть <%= @item.images.size %>  фото</div>
+          <% @item.images.each_with_index do |image, index| %>
+              <% if index > 0 %>
+                <a href="<%= image.url %>" rel="gallery-1" class="js-fancyBox" title=""></a>
+              <% end %>
+          <% end %>
+        </a>
+    <% end %>
     <%= @item.body.html_safe %>
     <p>
       <%= link_to t('.back_to_index'), refinery.news_items_path %>
     </p>
-  </article>
 <% end %>
-<% content_for :body_content_right do %>
-    <% if @item.images.size > 0 %>
-        <a href="#" class="b-fancybox f-right js-fancyBoxGallery" rel="gallery-1">
-        <img src="<%= @item.images.first.thumbnail("200x200").url %>" alt="" class="b-fancybox__poster" />
-        <div class="b-fancybox__t">Смотреть <%= @item.images.size %>  фото</div>
-        <% @item.images.each do |image| %>
-              <a href="<%= image.url %>" rel="gallery-1" class="js-fancyBox" title=""></a>
-        <% end %>
-        </a>
-    <% end %>
+<% content_for :side_body do %>
   <% render(:partial => 'recent_posts') %>
 <% end %>
 
-<%= render :partial => "/refinery/content_page" %>
+<h1 class="h1">
+  <%= yield :body_content_title %>
+</h1>
+<article class="b-article">
+  <%= yield :body %>
+  <hr class="b-content__line" />
+  <%= yield :side_body %>
+</article>
+
+<%= #render :partial => "/refinery/content_page"
+%>

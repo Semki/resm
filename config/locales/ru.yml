@@ -1,0 +1,18 @@
+ru:
+  refinery:
+    news:
+      items:
+        recent_posts:
+          recent_posts: "Читайте также"
+          read_more: "Подробнее"
+        index:
+          read_more: "Подробнее"
+          published: "Опубликовано"
+          news: "Новости"
+          no_item_yet: "Новостей еще нет"
+        show:
+          back_to_index: "Вернуться к списку"
+          published: "Опубликовано"
+        news_list:
+          read_more: "Подробнее"
+

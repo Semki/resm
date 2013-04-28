@@ -1,4 +1,7 @@
 $(function() {
+    if ($('#features_block').length == 0) {
+        return;
+    }
     $("#features_block").delegate(".dictionary", "change", function(event) {
         var selected_dictionary_id = this.selectedOptions[0].value;
         var selected_dictionary = null;
@@ -34,6 +37,9 @@ $(function() {
 });
 
 $(document).ready(function() {
+    if ($('#map_canvas').length == 0) {
+        return;
+    }
     var prevLat = parseFloat($("#lot_gps_lat").attr('value'));
     prevLat = prevLat || 35.032245;
     var prevLon = parseFloat($("#lot_gps_lon").attr('value'));

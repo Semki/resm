@@ -1,0 +1,67 @@
+<!--<%
+  # Collect the root items.
+  # ::Refinery::Menu is smart enough to remember all of the items in the original collection.
+  if (roots = local_assigns[:roots] || (collection ||= refinery_menu_pages).roots).present?
+    dom_id ||= 'menu'
+    css = [(css || 'menu clearfix')].flatten.join(' ')
+    hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
+-%>
+<nav id='<%= dom_id %>' class='<%= css %>'>
+  <ul>
+    <%= render :partial => '/refinery/menu_branch', :collection => roots,
+               :locals => {
+                 :hide_children => hide_children,
+                 :sibling_count => (roots.length - 1),
+                 :menu_levels => local_assigns[:menu_levels],
+                 :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
+               } -%>
+  </ul>
+</nav>
+<% end -%>
+-->
+
+<ul class="b-mainmenu">
+  <li class="b-mainmenu__item">
+    <i class="b-icon i-rarr"></i>
+    <a class="b-mainmenu__item__l" href="/">главная</a>
+  </li>
+  <li class="b-mainmenu__item b-mainmenu__item_active">
+    <i class="b-icon i-rarr"></i>
+    <a class="b-mainmenu__item__l" href="/news">Новости</a>
+  </li>
+  <li class="b-mainmenu__item">
+    <i class="b-icon i-rarr"></i>
+    <a class="b-mainmenu__item__l" href="#">о нас</a>
+  </li>
+  <li class="b-mainmenu__item">
+    <i class="b-icon i-rarr"></i>
+    <a class="b-mainmenu__item__l" href="#">аренда</a>
+  </li>
+  <li class="b-mainmenu__item">
+    <i class="b-icon i-rarr"></i>
+    <a class="b-mainmenu__item__l" href="#">продажа</a>
+  </li>
+  <li class="b-mainmenu__item b-mainmenu__item_sub">
+    <i class="b-icon i-rarr"></i>
+    <a class="b-mainmenu__item__l" href="#">дополнительно</a>
+    <ul class="b-mainmenu__item__submenu">
+      <li><a href="#">Трансферы</a></li>
+      <li><a href="#">Аренда лимузинов</a></li>
+      <li><a href="#">Аренда машин</a></li>
+      <li><a href="#">Аренда яхт</a></li>
+      <li><a href="#">Экскурсии</a></li>
+    </ul>
+  </li>
+  <li class="b-mainmenu__item">
+    <i class="b-icon i-rarr"></i>
+    <a class="b-mainmenu__item__l" href="#">как забронировать</a>
+  </li>
+  <li class="b-mainmenu__item">
+    <i class="b-icon i-rarr"></i>
+    <a class="b-mainmenu__item__l" href="#">отзывы</a>
+  </li>
+  <li class="b-mainmenu__item">
+    <i class="b-icon i-rarr"></i>
+    <a class="b-mainmenu__item__l" href="#">контакты</a>
+  </li>
+</ul>
